@@ -1,5 +1,5 @@
 import Header from "@/app/Header";
-import "./globals.css";
+import "./globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -18,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Header /> {children}
+        <Header />
+        {children}
       </body>
     </html>
   );
