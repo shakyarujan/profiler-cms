@@ -6,7 +6,7 @@ function Header() {
     <header className="p-5 bg-blue-500">
       <Link
         href="/"
-        className="px-2 bg-white text-blue-500 rounded-lg font-bold"
+        className="bg-blue-300 hover:bg-blue-400 text-blue-800 font-bold py-2 px-4 rounded inline-flex items-center"
       >
         Home
       </Link>

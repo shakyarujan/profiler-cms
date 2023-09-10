@@ -1,5 +1,5 @@
 import React from "react";
-import { Todo } from "../../../typings.d";
+import { Todo } from "../../models/typings.d";
 import Link from "next/link";
 
 const fetchTodos = async () => {
@@ -13,12 +13,22 @@ async function TodosList() {
 
   return (
     <>
-      {todos.map((todo) => {
-        // <p key={todo.id}>
-        //   <Link href={"/todos/todo.id"}>Todo: {todo.id}</Link>
-        // </p>;
-        <div>askdlfjalksdjfalsk</div>;
-      })}
+      {todos.map((todo) => (
+        <details key={todo.id} className="bg-red-200">
+          <summary>
+            <Link href={`/todos/${todo.id}`}>Todo: {todo.id}</Link>
+          </summary>
+          <p className="p-5">
+            <span>
+              <b>Title:</b> {todo.title}
+            </span>
+            <br />
+            <span>
+              <b>UserId:</b> {todo.userId}
+            </span>
+          </p>
+        </details>
+      ))}
     </>
   );
 }
