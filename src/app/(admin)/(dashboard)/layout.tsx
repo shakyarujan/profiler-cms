@@ -1,22 +1,23 @@
-import "./globals.scss";
+import "../globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Header } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Profiler CMS",
-  description: "ADD AND EDIT CONTENT",
+  title: "Dashboard",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
-    </html>
+    <section>
+      <Header />
+      {children}
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Todo } from "../../../typings.d";
+import { Todo } from "../../models/typings.d";
 import Link from "next/link";
 
 const fetchTodos = async () => {
@@ -16,7 +16,7 @@ async function TodosList() {
       {todos.map((todo) => (
         <details key={todo.id} className="bg-red-200">
           <summary>
-            <Link href={"/todos/todo.id"}>Todo: {todo.id}</Link>
+            <Link href={`/todos/${todo.id}`}>Todo: {todo.id}</Link>
           </summary>
           <p className="p-5">
             <span>
